@@ -20,7 +20,7 @@ int main()
 	cout << "20% tip: $" << bill * 0.20 << endl;
 	
 
-	{
+	
 
 	}   // end for
 	return 0;
