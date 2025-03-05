@@ -8,38 +8,30 @@ using namespace std;
 int main()
 {
 	
-	
+	int months = 0;
 	double avgBill = 0.0;
 	double bill = 0.0;
 	double totalBills = 0.0;
-	int months = 0;
 
-	//Enter bill for month 1
-	if 
-	 (months > 0)
-	cout << "Bill for month 1: ";
-	cin >> bill; }
-
-	else
-	cout << "No bill amount entered." << endl;
-	//Enter number of months
-	cout << "Number of months: ";
-	months += 1;
-	cin >> months;
-	
 	while (bill >= 0.0)
+	if (months > 0) { 
 
-		//Enter remaining months
-	cout << "Bill for month " << months + 1 << ": ";
-	cin >> bill;
-	
-	//Display bill avergae
-	cout << "Average electric bill for " << months << " months: $" << avgBill << endl;
+		cout << "Bill for month 1:" << bill << endl;
+		cin >> bill;
+		cout << "Enter the electric bill for month (negative number to end) " << months + 1 << ": ";
+		cin >> bill;
+
+		
+		totalBills += bill;
+		months += 1;
+	}
+	else cout << "No bill amount entered." << endl;
+
 	cout << fixed << setprecision(2);
+	cout << "Average electric bill for " << months << " months: $" << avgBill << endl;
+
 	
-	months += 1;
-	
-	
+
 	
 	return 0;
 }	//end of main function
