@@ -13,25 +13,24 @@ int main()
 	double bill = 0.0;
 	double totalBills = 0.0;
 
-	while (bill >= 0.0)
-	if (months > 0) { 
 
-		cout << "Bill for month 1:" << bill << endl;
-		cin >> bill;
-		cout << "Enter the electric bill for month (negative number to end) " << months + 1 << ": ";
-		cin >> bill;
-
+	while  (bill >=0 && bill != -1)
+		{cout << "Enter the electric bill for month (-1 to stop) " << months + 1 << ": ";
+	cin >> bill;
+	totalBills += bill;
+	months += 1;}
+	
+	
+	if (months > 0)
+	{avgBill = totalBills / months;
+		cout << fixed << setprecision(2);
+		cout << "Average electric bill: $" << avgBill << endl; }
+	else
+	{cout << "No electric bills entered." << endl;}
 		
-		totalBills += bill;
-		months += 1;
-	}
-	else cout << "No bill amount entered." << endl;
-
-	cout << fixed << setprecision(2);
-	cout << "Average electric bill for " << months << " months: $" << avgBill << endl;
 
 	
-
+	
 	
 	return 0;
 }	//end of main function
